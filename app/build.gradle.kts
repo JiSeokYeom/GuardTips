@@ -96,4 +96,5 @@ dependencies {
 
     api(Libs.Androidx.Activity.activityCompose)
 
+    api(Libs.Ui.lottie)
 }
