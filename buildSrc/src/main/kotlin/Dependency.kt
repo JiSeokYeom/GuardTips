@@ -7,13 +7,11 @@ object Libs {
         const val recyclerview = "androidx.recyclerview:recyclerview:1.2.1"
         const val viewpager = "androidx.viewpager2:viewpager2:1.0.0"
         const val preference = "androidx.preference:preference:1.1.0"
-        const val multiDex = "androidx.multiDex:multiDex:2.0.0"
         const val coreKtx = "androidx.core:core-ktx:1.7.0"
         const val activityKtx = "androidx.activity:activity-ktx:1.4.0"
         const val fragmentKtx = "androidx.fragment:fragment-ktx:1.2.4"
         const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:2.4.2"
         const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:2.4.2"
-        const val annotation = "androidx.annotation:annotation:1.2.0"
         const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.2.0-alpha01"
         const val window = "androidx.window:window:1.1.0-alpha06"
 
