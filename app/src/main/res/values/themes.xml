@@ -3,7 +3,8 @@
 
     <style name="Theme.GuardTips" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="S">@android:color/transparent</item>
-
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
 </resources>
