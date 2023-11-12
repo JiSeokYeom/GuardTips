@@ -1,7 +1,12 @@
 package com.guardtips
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.webkit.JavascriptInterface
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
@@ -24,6 +29,7 @@ import com.google.accompanist.web.WebView
 import com.google.accompanist.web.rememberWebViewState
 import com.guardtips.compose_ui.MainBlueColor
 
+@SuppressLint("SetJavaScriptEnabled")
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,9 +72,10 @@ class MainActivity : ComponentActivity() {
                                         domStorageEnabled = true
                                         javaScriptCanOpenWindowsAutomatically = false
                                     }
-
-                                    setBackgroundColor(0x00000000)
-                                    setLayerType(View.LAYER_TYPE_SOFTWARE, null)
+                                    addJavascriptInterface(
+                                        JavascriptBridge(this@MainActivity),
+                                        "Android"
+                                    )
                                 }
                             }
                         )
@@ -82,6 +89,14 @@ class MainActivity : ComponentActivity() {
                     else -> Unit
                 }
             }
+        }
+    }
+
+    class JavascriptBridge(private val context: Context) {
+        @JavascriptInterface
+        fun getType(type: String) {
+            Log.d("테스", type)
+            Toast.makeText(context, type, Toast.LENGTH_LONG).show()
         }
     }
 }

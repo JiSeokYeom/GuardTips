@@ -51,6 +51,11 @@ object Libs {
 
     }
 
+    object Firebase {
+        const val bom = "com.google.firebase:firebase-bom:32.0.0"
+        const val analytics = "com.google.firebase:firebase-analytics"
+    }
+
     object Ui {
         const val lottie = "com.airbnb.android:lottie:5.2.0"
     }

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -87,6 +88,8 @@ dependencies {
     api(Libs.Androidx.Compose.runtimeLivedata)
     api(Libs.Androidx.Compose.webView)
 
+    api(platform(Libs.Firebase.bom))
+    api(Libs.Firebase.analytics)
 
     api(Libs.Androidx.Coroutine.runTime)
     api(Libs.Androidx.Coroutine.viewModel)
